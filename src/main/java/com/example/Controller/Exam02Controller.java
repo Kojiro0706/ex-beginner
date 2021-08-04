@@ -11,13 +11,13 @@ public class Exam02Controller {
 	@Controller
 	@RequestMapping("/ex02")
 	public class ExamController02 {
+		@Autowired
+		private HttpSession session;
 		@RequestMapping("")
 		public String index() {
 			return "exam02";
 		}
 
-		@Autowired
-		private HttpSession session;
 
 		@RequestMapping("/add")
 		public String addition(Integer num1, Integer num2) {

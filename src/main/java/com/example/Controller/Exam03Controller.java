@@ -21,8 +21,9 @@ public class Exam03Controller {
 
 	@RequestMapping("/sum")
 		public String sum(Integer item1, Integer item2,Integer item3) {
-			application.setAttribute("sum", item1 + item2 + item3);
-			application.setAttribute("sum2", (item1 + item2 + item3) * 1.08);
+			int totalPrice = item1 + item2 + item3;
+			application.setAttribute("totalPrice", totalPrice);
+			application.setAttribute("totalPriceIncludeTax", totalPrice * 1.08);
 			
 			return "exam03-result";
 			
